@@ -14,6 +14,17 @@ window.initMap = () => {
         center: restaurant.latlng,
         scrollwheel: false
       });
+
+
+      google.maps.event.addListener(self.map, "tilesloaded", () =>{
+        [].slice.apply(document.querySelectorAll('#map a,div,button, area, iframe')).forEach((item) => {
+          item.setAttribute('tabindex','-1');
+          console.log(item)
+        });
+        document.getElementsByTagName('iframe')[0].setAttribute('title', 'Google Maps for restaurants');
+      });
+
+
       fillBreadcrumb();
       DBHelper.mapMarkerForRestaurant(self.restaurant, self.map);
     }
@@ -144,6 +155,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.innerHTML = restaurant.name;
+  li.setAttribute('aria-current', 'page');
   breadcrumb.appendChild(li);
 }
 

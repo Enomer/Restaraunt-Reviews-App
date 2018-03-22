@@ -13,25 +13,25 @@
 <body>
   <header>
     <nav>
-      <h1><a id="restaurant-head" tabindex="-1" href="/">Restaurant Reviews</a></h1>
+      <h1><a id="restaurant-head" role="link" href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
-    <section id="map-container">
-      <div id="map"></div>
+  <main id="maincontent" aria-label="Map With Restaurants of Interest" role="main">
+    <section id="map-container" tabindex="-1" >
+      <div id="map" tabindex="-1" role="presentation"></div>
     </section>
     <section>
       <div class="filter-options">
         <h2>Filter Results</h2>
-        <select tabindex="1" aria-label="Select a Neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <select tabindex="1" role="listbox" aria-label="Select a Neighborhood" id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select tabindex="2" aria-label="Select a Cuisine" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select tabindex="2" role="listbox" aria-label="Select a Cuisine" id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <ul id="restaurants-list" role="list"></ul>
     </section>
   </main>
 
@@ -53,7 +53,7 @@
   <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRHJVl9WCfo1P4_a5Kqx0yYCEsLF0btB8&libraries=places&callback=initMap"></script>
 
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a href="/" role="link"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
 </body>

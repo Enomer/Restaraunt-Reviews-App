@@ -106,7 +106,7 @@ nav h1 a {
 }
 /* ====================== Map ====================== */
 #map {
-  height: 300px;
+  height: 500px;
   width: 100%;
   background-color: #ccc;
 }
@@ -243,6 +243,7 @@ nav h1 a {
 }
 #reviews-container {
 	width: 100%;
+	padding: 0 0 4rem 0 !important;
 }
 
 #restaurant-container {
@@ -335,6 +336,9 @@ nav h1 a {
   color: #666;
 	text-align: center;
 }
+aside {
+	background-color: white !important;
+}
 #restaurant-hours {
 	display: flex;
 	flex-wrap: wrap;
@@ -342,7 +346,11 @@ nav h1 a {
 	align-items: center;
 }
 @media screen and (min-width: 1000px) {
-
+	#map {
+		height: 300px !important;
+		width: 100%;
+		background-color: #ccc;
+	}
 	#restaurants-list .restaurant-img {
 		min-width: 0;
 		padding: 1rem;
@@ -407,6 +415,10 @@ nav h1 a {
 	  border-radius: 0;
 		width: 65%;
 		margin-top: 2rem;
+	}
+
+	.inside #map-container {
+		background-color: white !important;
 	}
 	#reviews-container > h2 {
 		margin: 2rem 0;

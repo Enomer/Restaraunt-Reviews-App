@@ -19,7 +19,6 @@ window.initMap = () => {
       google.maps.event.addListener(self.map, "tilesloaded", () =>{
         [].slice.apply(document.querySelectorAll('#map a,div,button, area, iframe')).forEach((item) => {
           item.setAttribute('tabindex','-1');
-          console.log(item)
         });
         document.getElementsByTagName('iframe')[0].setAttribute('title', 'Google Maps for restaurants');
       });

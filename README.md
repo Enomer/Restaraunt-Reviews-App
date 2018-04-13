@@ -7,7 +7,7 @@ For this **Restaurant Reviews** projects, I incrementally convert a static webpa
 ### How to run
 
 Used python backend, just install python
-```python python -m http.server 5000 ```
+``` python -m http.server 5000 ```
 open http://localhost:5000
 
 ### Features
